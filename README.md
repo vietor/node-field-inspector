@@ -37,15 +37,15 @@ var value = {
 };
 
 console.log('before', JSON.stringify(value));
-ti.perform(value);
-console.log('after', JSON.stringify(value));
+var rst = ti.perform(value);
+console.log('after', rst, JSON.stringify(value));
 ```
 
 ### Output
 
 ``` bash
 before {"token":"token","game_id":1110,"type":1,"description":" abc "}
-after {"token":"token","game_id":1110,"type":1,"description":"abc","user_id":0}
+after null {"token":"token","game_id":1110,"type":1,"description":"abc","user_id":0}
 ```
 
 ## API
@@ -55,8 +55,8 @@ after {"token":"token","game_id":1110,"type":1,"description":"abc","user_id":0}
 Create a **field-inspector** instance.
 
 > the model has two struction support  
->> 1) K/V object, **V** has more rules.  
->> 2) Array(object), object require a field 'name' for **K**, other fields was the rules.
+> 1) K/V object, **V** has more rules.  
+> 2) Array(object), object require a field 'name' for **K**, other fields was the rules.
 
 |*Key*|*Type*|*Default*|*Description*|
 |---|---|---|---|
@@ -78,7 +78,9 @@ Create a **field-inspector** instance.
 
 ### perform(object)
 
-**field-inspector** proform the rules. return a **null** whe no error, or a object when detected a error.
+**field-inspector** proform the rules, it modify the **parameter object**. return a **null** whe no error or a object when detected a error.
+
+#### Error object
 
 |*Key*|*Type*|*Description*|
 |---|---|---|
