@@ -78,7 +78,8 @@ Create a **field-inspector** instance.
 
 ### perform(object)
 
-**field-inspector** proform the rules, it modify the **parameter object**. return a **null** whe no error or a object when detected a error.
+**field-inspector** proform the rules, it modify the **parameter object**.  
+it return a **null** whe no error or a **error object* when detected a error.
 
 #### Error object
 
