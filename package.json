@@ -14,6 +14,12 @@
         "inspector",
         "validator"
     ],
+    "files": [
+        "LICENSE",
+        "README.md",
+        "index.js",
+        "lib/"
+    ],
     "author": "Vietor Liu",
     "license": "MIT",
     "bugs": {
