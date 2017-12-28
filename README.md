@@ -55,8 +55,10 @@ after null {"token":"token","game_id":1110,"type":1,"description":"abc","user_id
 Create a **field-inspector** instance.
 
 > the model has two struction support  
-> 1) K/V object, **V** has more rules.  
-> 2) Array(object), object require a field 'name' for **K**, other fields was the rules.
+> 1) K/V object, **V** has more rules. 
+>> {remark: {empty: true}}  
+> 2) Array(object), object require a field 'name' for **K**, other fields was the rules.  
+>> [{name: "remark", empty: true}]
 
 |*Key*|*Type*|*Default*|*Description*|
 |---|---|---|---|
@@ -94,6 +96,3 @@ it return a **null** whe no error or a **error object* when detected a error.
 ``` javascript
 { name: 'text', type: 'regexp' }
 ```
-
-
-
