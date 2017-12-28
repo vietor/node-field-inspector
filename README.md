@@ -60,6 +60,7 @@ Create a **field-inspector** instance.
 
 |*Key*|*Type*|*Default*|*Description*|
 |---|---|---|---|
+|type|string|undefined|the **typeof** result check|
 |empty|boolean|false|accept empty value|,
 |default|stringOrNumber|undefined|the default value when empty|
 |candidate|string|undefined|accept empty when **has** another prameter|
