@@ -16,6 +16,12 @@ var ti = inspector.newInstance({
         trim: true,
         empty: true,
         length_max: 128
+    },
+    tolower: {
+        tolower: true
+    },
+    toupper: {
+        toupper: true
     }
 });
 
@@ -23,7 +29,9 @@ var value = {
     token: 'token',
     game_id: 1110,
     type: 1,
-    description: ' abc '
+    description: ' abc ',
+    tolower: 'Is Lower',
+    toupper: 'Is Upper'
 };
 
 console.log('before', JSON.stringify(value));

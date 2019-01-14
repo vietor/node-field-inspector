@@ -26,6 +26,12 @@ var ti = inspector.newInstance({
         trim: true,
         empty: true,
         length_max: 128
+    },
+    tolower: {
+        tolower: true
+    },
+    toupper: {
+        toupper: true
     }
 });
 
@@ -33,7 +39,9 @@ var value = {
     token: 'token',
     game_id: 1110,
     type: 1,
-    description: ' abc '
+    description: ' abc ',
+    tolower: 'Is Lower',
+    toupper: 'Is Upper'
 };
 
 console.log('before', JSON.stringify(value));
@@ -44,8 +52,8 @@ console.log('after', rst, JSON.stringify(value));
 ### Output
 
 ``` bash
-before {"token":"token","game_id":1110,"type":1,"description":" abc "}
-after null {"token":"token","game_id":1110,"type":1,"description":"abc","user_id":0}
+before {"token":"token","game_id":1110,"type":1,"description":" abc ","tolower":"Is Lower","toupper":"Is Upper"}
+after {"token":"token","game_id":1110,"type":1,"description":"abc","tolower":"is lower","toupper":"IS UPPER","user_id":0}
 ```
 
 ## API
@@ -68,6 +76,8 @@ Create a **field-inspector** instance.
 |candidate|string|undefined|accept empty when **has** another prameter|
 |match|string|undefined|accept value when **equal** another prameter|
 |trim|boolean|false|trim the value string|
+|tolower|boolean|false|convert value string to lower case|
+|toupper|boolean|false|convert value string to upper case|
 |digit|boolean|false|accept digit number value|
 |length|Array(number)[min,max]|undefined|accept vlaue **length** **IN** range|
 |length_min|number|1|accept value minimal **length**|
